@@ -13,3 +13,5 @@ To use the solution:
 - After being prompted to input the file names in the terminal, input the names in this format "clothes accessories ..."
 - After inputting the file names and pressing return, the terminal and "output.csv" (inside "output-csv" folder) file will display the results
 - Then end the program in the terminal and you can rerun the program
+
+Author (Brett Platt)
