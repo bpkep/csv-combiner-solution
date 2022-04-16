@@ -7,7 +7,6 @@ Prerequisites:
 - "output-csv" folder inside main testing folder you plan to use that holds the "fixtures" folder and "csv-combiner.js" file
 
 To use the solution:
-
 - Place the csv-combiner.js file into your folder containing the "fixtures" folder
 - Navigate to the folder location in your terminal 
 - Run the "csv-combiner.js" file with the following command "Node csv-combiner.js"
