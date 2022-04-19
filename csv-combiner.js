@@ -18,7 +18,6 @@ var outputFile = "output-csv/output.csv";
 // Array variable to store the read .csv file later in the code
 var rows = [];
 
-var check
 
 // try to see if the file has been created yet, if it has continue your day
 try {
