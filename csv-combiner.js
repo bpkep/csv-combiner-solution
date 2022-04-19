@@ -40,7 +40,7 @@ function checkEmpty(value)
 
 
 // Creating an instance (userInput) of the class that can input and output data, from and to the user (using it to ask for user input files and accept those files)
-const userInput = readline.createInterface
+var userInput = readline.createInterface
 (
     {
         // Setting the parameters for the user interface 
@@ -48,6 +48,14 @@ const userInput = readline.createInterface
         output: process.stdout,
     }
 );
+
+
+// Creates an instance of the class that can perform file operations (used for writing at the end of the .csv output file)
+var writer = fs.createWriteStream(outputFile, 
+{
+    // Sets the .csv file to be written at the end of the file
+    flags: 'a'
+});
 
 
 // Asks for and accepts user input, and stores the user input in the variable fileName
@@ -77,13 +85,6 @@ userInput.question("\nPlease enter the file name(s) in the following format: \n\
         
         // Stores the filename and filetype plus some punctuation to help with printing the additional column (filename)
         var halfFileName = ",\"" + header[l] + fileType + "\"";
-
-        // Creates an instance of the class that can perform file operations (used for writing at the end of the .csv output file)
-        var writer = fs.createWriteStream(outputFile, 
-        {
-            // Sets the .csv file to be written at the end of the file
-            flags: 'a'
-        });
         
         // Checks if the .csv output file has any content (to avoid writing the column titles again)
         if (fs.readFileSync(outputFile, 'utf8').length == 0)
